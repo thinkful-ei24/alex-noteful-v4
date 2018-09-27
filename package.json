@@ -8,8 +8,9 @@
 	},
 	"main": "server.js",
 	"scripts": {
-		"start": "node server.js",
-		"test": "cross-env NODE_ENV=test mocha --file test/server.test.js"
+		"start": "nodemon server.js",
+		"test": "cross-env NODE_ENV=test mocha --file test/server.test.js",
+		"seed": "node ./utils/seed-database.js"
 	},
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
