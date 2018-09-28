@@ -96,7 +96,7 @@ router.put('/:id', (req, res, next) => {
     return next(err);
   }
 
-  const updateTag = { name };
+  const updateTag = { $set: { name } };
 
   Tag.findOneAndUpdate({ _id: id, userId }, updateTag, { new: true })
     .then(result => {
