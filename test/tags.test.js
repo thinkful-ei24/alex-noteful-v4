@@ -19,7 +19,7 @@ chai.use(chaiHttp);
 const expect = chai.expect;
 const sandbox = sinon.createSandbox();
 
-describe.only('Noteful API - Tags', function() {
+describe('Noteful API - Tags', function() {
   let token;
   let user;
   before(function() {
@@ -72,7 +72,7 @@ describe.only('Noteful API - Tags', function() {
     return mongoose.disconnect();
   });
 
-  describe('GET /api/tags', function() {
+  describe.only('GET /api/tags', function() {
     it('should return the correct number of tags', function() {
       return Promise.all([
         Tag.find({ userId: user.id }),
@@ -455,7 +455,7 @@ describe.only('Noteful API - Tags', function() {
     });
   });
 
-  describe.only('DELETE /api/tags/:id', function() {
+  describe('DELETE /api/tags/:id', function() {
     it('should delete an existing tag and respond with 204', function() {
       let data;
       return Tag.findOne({ userId: user.id })
