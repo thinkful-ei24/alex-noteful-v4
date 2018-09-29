@@ -3,4 +3,4 @@ node_js: node
 services: mongodb
 addons:
   jwt:
-    - secure: JWT_SECRET
+    secure: JWT_SECRET
